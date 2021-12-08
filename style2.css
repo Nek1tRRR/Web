@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #191a19;
+  color: white;
+}
+header,
+nav,
+section,
+.content-container,
+footer,
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-card,
+.box-1-1 > .gradient-card {
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.5);
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ========== Menu ==========*/
+header {
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 1em 8em;
+  background: #161a20;
+  box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+#logo {
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: max-content;
+}
+nav a {
+  text-decoration: none;
+  color: #94fc13;
+  padding: 0.5em 2em;
+  border: 2px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+nav a:hover {
+  border: 2px solid #94fc13;
+}
+
+/* ========== Scrollbar ==========*/
+::-webkit-scrollbar {
+  width: 12px;
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #191a19, #70c501, #191a19);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #02e715, #000000);
+}
+
+/* ========== Home Cards ==========*/
+#home,#home1,#home2{
+  background: #000;
+}
+#home .card, .card1, .card2 {
+  width: 110em;
+  padding: 1.5em;
+  background: #2d3540;
+  border-radius: 1em;
+  box-shadow: 0px 10px 25px #131eeb;
+}
+.card, .card2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.card1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#home .card img, .card1 img, .card2 img {
+  width: 40em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#home .card h3, .card1 h3, .card2 h3 {
+  color: #4e57fc;
+  font-size: 2rem;
+}
+#home .card h2, .card1 h2, .card2 h2 {
+  color: #70c501;
+  font-size: 1.2em;
+}
+#home .card p {
+  color: rgb(230, 228, 228);
+
+}
+#home .card1 .text1{
+  display: flex;
+  justify-content: flex-end;
+}
+#home .card1  {
+  color: rgb(230, 228, 228);
+  margin-bottom: 0.4em;
+  font-size: 1.2em;
+}
+
+
+
+/* ========== Footer ==========*/
+footer {
+  /* background: #161a20;
+  padding: 3em; */
+  position: relative;
+  padding: 50px 100px;
+  background: #000;
+}
+footer .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+footer .container .sec h2 {
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .container .sec h2::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ffeb3b;
+}
+.sci {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  gap: 10px;
+}
+footer li {
+  list-style: none;
+}
+.sci li a {
+  width: 48px;
+  height: 48px;
+  background: #e40404;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.sci .fa {
+  font-size: 20px;
+}
+.quicklinks {
+  position: relative;
+}
+.quicklinks li a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.info {
+  position: relative;
+}
+.info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+.info li span:nth-child(1) {
+  font-size: 20px;
+}
+.copyrightText {
+  background: #1f3389;
+  padding: 8px 100px;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  footer {
+    padding: 40px;
+  }
+  footer .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .copyrightText {
+    padding: 8px 40px;
+  }
+}
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+a.idTop {
+  position: fixed;
+  z-index: 9999; 
+  bottom: 0%; 
+  right: 0%; 
+  background: #94fc13; 
+  opacity: .5; 
+  color: black; 
+  padding: 10px; 
+  margin: 5px 15px 15px 5px; 
+ }
+ a.idTop:hover {
+  opacity: 1;
+ }
+
